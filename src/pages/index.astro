@@ -1,99 +1,226 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 
-import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
-import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
-import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
 import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Header from '~/components/widgets/Header.astro';
+import Hero from '~/components/widgets/Hero.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
-  ignoreTitleTemplate: true,
+  title: "Zain Ul Hassan | Dreamers'Lab",
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <Fragment slot="announcement"></Fragment>
+  <Fragment slot="header">
+    <Header
+      links={[
+        { text: 'Home', href: '#' },
+        { text: 'About', href: '#about' },
+        { text: 'Porfolio', href: '#porfolio' },
+        { text: 'Blog', href: '#blog' },
+      ]}
+      actions={[
+        {
+          text: 'Hire me',
+          href: '#',
+        },
+      ]}
+      isSticky
+      showToggleTheme
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
 
   <Hero
-    callToAction={{
-      targetBlank: true,
-      text: 'Get template',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:download',
-    }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
-    image={{ src: '~/assets/images/hero.png', alt: 'AstroWind Hero Image' }}
+    id="hero"
+    title="Zain Ul Hassan"
+    tagline="🚀 Full Stack Mobile App Developer"
+    callToAction={{ targetBlank: true, text: 'Hire me', href: '/' }}
   >
-    <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 3.0</span> + Tailwind CSS
-    </Fragment>
-
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 3.0
-        + Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-       Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages
-      & Blogs.
+      With over 3 years of hands-on experience and a passion for crafting exceptional mobile experiences, I am your
+      go-to mobile app developer. Through a myriad of certifications and a diverse portfolio of projects in Kotlin and
+      Flutter, I've honed my skills to bring your app ideas to life, delivering innovation, usability, and excellence.
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
+  <!-- Content Widget **************** -->
 
-  <Note />
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+  <Content
+    id="about"
+    columns={3}
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
-        description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:brand-tailwind',
+        icon: 'tabler:brand-github',
+        callToAction: {
+          targetBlank: true,
+          text: 'Github',
+          href: 'https://github.com/zainulhassan815',
+        },
       },
       {
-        title: 'Ready-to-use Components',
-        description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
+        icon: 'tabler:brand-linkedin',
+        callToAction: {
+          targetBlank: true,
+          text: 'LinkedIn',
+          href: 'https://www.linkedin.com/in/zain-ul-hassan-1986321a0',
+        },
       },
       {
-        title: 'Best Practices',
-        description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
+        icon: 'tabler:brand-twitter',
+        callToAction: {
+          targetBlank: true,
+          text: 'Twitter',
+          href: 'https://twitter.com/zainulhassan815',
+        },
       },
       {
-        title: 'Excellent Page Speed',
-        description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
+        icon: 'tabler:brand-youtube',
+        callToAction: {
+          targetBlank: true,
+          text: 'YouTube',
+          href: 'https://www.youtube.com/@DreamersLab',
+        },
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        icon: 'tabler:brand-upwork',
+        callToAction: {
+          targetBlank: true,
+          text: 'UpWork',
+          href: 'https://www.upwork.com/freelancers/~0141070652aeb1f2af',
+        },
+      },
+    ]}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">📝 About me</h3>
+      <p>
+        As a Mobile App Developer, I have a passion for developing innovative and user-friendly mobile applications.
+        With 3+ years of experience in the field, I have crafted my skills in Kotlin and Android development and have a
+        strong understanding of the latest development tools and technologies.
+      </p>
+      <br />
+      <p>
+        I effectively collaborate with cross-functional teams to achieve project goals. I am a dedicated and hardworking
+        individual who is committed to delivering quality work and ensuring customer satisfaction.
+      </p>
+      <br />
+      <p>If you're curious to dive deeper into my work, you can follow me:</p>
+    </Fragment>
+
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Content>
+
+  <Features2
+    title="⚡️ My Development Toolkit"
+    subtitle="Transforming Ideas into Apps with Cutting-Edge Technologies"
+    columns={3}
+    items={[
+      {
+        title: 'Android SDK',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
+          'Software Development Kit that includes a comprehensive set of development tools for native android development.',
+        icon: 'logos:android-vertical',
       },
       {
-        title: 'Open to new ideas and contributions',
+        title: 'Jetpack Compose',
+        description: 'Jetpack Compose is Android’s recommended modern toolkit for building native UI.',
+        icon: 'jetpack-compose',
+      },
+      {
+        title: 'Android Studio',
+        description: 'Official integrated development environment (IDE) designed specifically for Android development.',
+        icon: 'skill-icons:androidstudio-light',
+      },
+      {
+        title: 'Kotlin',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+          'Kotlin is a cross-platform, statically typed, general-purpose high-level programming language with type inference.',
+        icon: 'logos:kotlin-icon',
+      },
+      {
+        title: 'Flutter',
+        description:
+          'Flutter transforms the app development process. Build, test, and deploy beautiful mobile, web, desktop, and embedded apps from a single codebase.',
+        icon: 'logos:flutter',
+      },
+      {
+        title: 'Dart',
+        description: 'Dart is a client-optimized language for fast apps on any platform.',
+        icon: 'logos:dart',
+      },
+      {
+        title: 'VS Code',
+        description:
+          'A code editor redefined and optimized for building and debugging modern web and cloud applications.',
+        icon: 'logos:visual-studio-code',
+      },
+      {
+        title: 'Firebase',
+        description:
+          'A set of backend cloud computing services and application development platforms provided by Google.',
+        icon: 'logos:firebase',
+      },
+      {
+        title: 'Supabase',
+        description:
+          'Supabase is an open source Firebase alternative that provides Postgres database, Authentication, instant APIs, Edge Functions, Realtime subscriptions, Storage, and Vector embeddings.',
+        icon: 'logos:supabase-icon',
+      },
+      {
+        title: 'Git',
+        description:
+          'Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.',
+        icon: 'logos:git-icon',
+      },
+      {
+        title: 'GitHub',
+        description:
+          'A cloud-based service for software development and version control using Git, allowing developers to store and manage their code.',
+        icon: 'logos:github-icon',
+      },
+      {
+        title: 'NodeJs',
+        description:
+          'A back-end JavaScript runtime environment, runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser.',
+        icon: 'logos:nodejs-icon',
+      },
+      {
+        title: 'TypeScript',
+        description:
+          'A strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.',
+        icon: 'logos:typescript-icon',
+      },
+      {
+        title: 'Fastify',
+        description:
+          'A web framework highly focused on providing the best developer experience with the least overhead and a powerful plugin architecture.',
+        icon: 'logos:fastify-icon',
+      },
+      {
+        title: 'Prisma',
+        description:
+          'A server-side library that helps developers read and write data to the database in an intuitive, efficient and safe way.',
+        icon: 'logos:prisma',
+      },
+      {
+        title: 'PostgreSQL',
+        description:
+          'A free and open-source relational database management system emphasizing extensibility and SQL compliance.',
+        icon: 'logos:postgresql',
+      },
+      {
+        title: 'Figma',
+        description: 'The leading collaborative design tool for building meaningful products.',
+        icon: 'logos:figma',
       },
     ]}
   />
@@ -101,72 +228,38 @@ const metadata = {
   <!-- Content Widget **************** -->
 
   <Content
+    id="porfolio"
+    title="🗃️ Project Showcase"
+    subtitle="Bringing Ideas to Life, One Creative Project at a Time"
     isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
     items={[
       {
-        title: 'Built on top of Astro 3.0',
+        title: 'Description:',
         description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
+          'Developed a comprehensive brand identity for a tech startup, Tech Innovators, specializing in disruptive innovations. The goal was to convey a modern yet approachable image that resonated with both corporate clients and tech enthusiasts.',
       },
       {
-        title: 'Styled using Tailwind CSS',
+        title: 'Role:',
         description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
+          'Led the entire branding process from concept to execution. Created a dynamic logo that symbolized innovation, selected a vibrant color palette, and I designed corporate stationery, website graphics, and social media assets.',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
+      src: 'https://images.unsplash.com/photo-1658248165252-71e116af1b34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=928&q=80',
+      alt: 'Tech Design Image',
+    }}
+    callToAction={{
+      targetBlank: true,
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-       Gain a competitive advantage by incorporating industry leading practices
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 1: <br /><span class="text-2xl">Brand identity for tech innovators</span>
+      </h3>
     </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
@@ -177,216 +270,129 @@ const metadata = {
 
   <Content
     isReversed
-    isAfterContent
+    isAfterContent={true}
     items={[
       {
-        title: 'Enhanced user engagement',
+        title: 'Description:',
         description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
+          'Designed a captivating event poster for an art and music festival, "ArtWave Fusion," aiming to showcase the synergy between visual art and music genres.',
       },
       {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
+        title: 'Role:',
+        description: `Translated the festival's creative theme into a visually striking poster. Used bold typography, vibrant colors, and abstract elements to depict the fusion of art and music. Ensured the design captured the festival's vibrant atmosphere.`,
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
+      src: 'https://images.unsplash.com/photo-1619983081563-430f63602796?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+      alt: 'Art and Music Poster Image',
+    }}
+    callToAction={{
+      targetBlank: true,
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
     }}
   >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 2: <br /><span class="text-2xl">Event poster for art & music festival</span>
+      </h3>
+    </Fragment>
 
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
   </Content>
 
-  <!-- Steps Widget ****************** -->
+  <!-- Content Widget **************** -->
 
-  <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+  <Content
+    isReversed
+    isAfterContent={true}
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
-        description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+        title: 'Description:',
+        description: `Redesigned the e-commerce website for an eco-conscious fashion brand, GreenVogue. The objective was to align the brand's online presence with its sustainable ethos and improve user experience.`,
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
-        description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
+        title: 'Role:',
+        description: `Conducted a thorough analysis of the brand's values and customer base to inform the design direction. Created a visually appealing interface with intuitive navigation, highlighting sustainable materials, and integrating a user-friendly shopping experience.`,
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
+      src: 'https://plus.unsplash.com/premium_photo-1683288295841-782fa47e4770?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=870&q=80',
+      alt: 'Fashion e-commerce Image',
     }}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    tagline="Components"
-    items={[
-      {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
-      },
-      {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
-      },
-      {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
-      },
-    ]}
+    callToAction={{
+      targetBlank: true,
+      text: 'Go to the project',
+      icon: 'tabler:chevron-right',
+      href: '#',
+    }}
   >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Project 3: <br /><span class="text-2xl">E-commerce website redesign for fashion brand</span>
+      </h3>
+    </Fragment>
+
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </Features2>
+  </Content>
 
-  <!-- HighlightedPosts Widget ******* -->
+  <!-- Testimonials Widget *********** -->
 
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
+  <Testimonials
+    title="💬 Client testimonials"
+    subtitle="Discover what clients have to say about their experiences working with me."
+    testimonials={[
       {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+        testimonial: `Very much dedicated and passionate seller. Did it in time. Much more than I expected.`,
+        name: 'aknistudios',
+        job: 'Nepal',
+        image: {
+          src: '~/assets/images/aknistudios.webp',
+          alt: 'aknistudios Image',
+        },
       },
       {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+        testimonial: `Thanks so much! You were an excellent seller. Creative, polite and a fantastic communicator. Thank you again, and I look forward to working with you more!`,
+        name: 'erikos68',
+        job: 'Sweden',
+        image: {
+          src: '~/assets/images/erikos68.svg',
+          alt: 'erikos68 Image',
+        },
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+        testimonial: `I like his work. Easy to work with. I really recommend this guy.`,
+        name: 'amjadadel',
+        job: 'United Kingdom',
+        image: {
+          src: '~/assets/images/amjadadel.jpg',
+          alt: 'amjadadel Image',
+        },
       },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
-  />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
     ]}
   />
 
   <!-- CallToAction Widget *********** -->
 
   <CallToAction
+    title="Elevate Your Mobile Experience"
+    subtitle="Welcome to the world of limitless possibilities in mobile app development. We turn your ideas into seamless, user-friendly apps that captivate, engage, and transform."
     callToAction={{
-      text: 'Get template',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:download',
+      text: 'Hire me',
+      href: '/',
     }}
-  >
-    <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
+  />
 
-    <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+  <!-- BlogLatestPost Widget **************** -->
+
+  <BlogLatestPosts id="blog" title="Explore my insightful articles on my blog">
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
     </Fragment>
-  </CallToAction>
+  </BlogLatestPosts>
 </Layout>
